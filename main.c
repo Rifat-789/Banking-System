@@ -143,6 +143,11 @@ void withdraw(int *amountWith, int *total){
     printf("Enter Withdraw Amount: ");
     scanf("%d", amountWith);
 
+    if (*amountWith > *total){
+        printf("Insufficient Balance!\n");
+        return;
+    }
+
     (*total) -= *amountWith;
 }
 
